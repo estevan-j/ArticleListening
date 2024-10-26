@@ -1,34 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Typography } from "@mui/material"
+import CardText from "./components/CardText/CardText"
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="App">
+      <Typography variant="h3" sx={{ textAlign: "center", width: "650px" }} >We release interesting articles about technology</Typography>
+      <img src="/Seperator.svg" alt="/////" />
+      <div className="container-text">
+        <CardText text={"Unlocking the Power of Cloud Computing"} imageNumber={"1"} />
+        <CardText text={"The Future of AI: How Machine Learning is Revolutionizing Industries"} imageNumber={"2"} />
+        <CardText text={"The Impact of 5G on Business: How Faster Networks are Transforming the Way We Work"} imageNumber={"3"} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
